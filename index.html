@@ -5,20 +5,51 @@
     <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
           name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <!--    Icon-->
     <link href="hourglass-half-solid.svg" rel="icon">
-    <!--Style-->
+    <!--    Style-->
     <link href="style.css" rel="stylesheet">
-    <!--Script-->
+    <!--    Script-->
     <script src="script.js"></script>
     <title>Custom Countdown</title>
 </head>
 <body>
 
 
-<!--Video Background-->
+<!--    Video Background-->
 <video autoplay class="video-background" loop muted src="time.mp4"></video>
 <div class="video-overlay"></div>
+<!--    Container-->
+<div class="container">
+    <!--    Input-->
+    <div class="input-container" id="input-container">
+        <h1>Create a Custom Countdown!</h1>
+        <form action="" class="form" id="countdownForm">
+            <label for="title">Title</label>
+            <input id="title" placeholder="What are you counting down to?" type="text">
+            <label for="date-picker">Select a Date</label>
+            <input id="date-picker" type="date">
+            <button type="submit">Submit</button>
 
+        </form>
+    </div>
+    <!--    Countdown-->
+    <div class="countdown" hidden id="countdown">
+        <h1 id="countdown-title">Countdown Title Here</h1>
+        <ul>
+            <li><span>3</span>Days</li>
+            <li><span>6</span>Hours</li>
+            <li><span>45</span>Minutes</li>
+            <li><span>52</span>Seconds</li>
+        </ul>
+        <button id="countdown-button">RESET</button>
+    </div>
+    <div class="complete" hidden id="complete">
+        <h1 class="complete-title">Countdown Complete!</h1>
+        <h1 id="complete-info">Countdown finished on 09-09-2020</h1>
+        <button id="complete-button">New Countdown</button>
+    </div>
+</div>
 
 </body>
 </html>
